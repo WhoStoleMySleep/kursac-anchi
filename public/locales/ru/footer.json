@@ -1,0 +1,25 @@
+{
+  "kara": "Небольшой ремесленный бренд, предлагающий продуманную коллекцию высококачественных предметов повседневного спроса.",
+  "company": "Компания",
+  "companyLinks": {
+    "about": "О нас",
+    "termOfUse": "Условия использования",
+    "privacyPolicy": "Политика конфиденциальности",
+    "howItWorks": "Как это работает",
+    "contactUs": "Свяжитесь с нами"
+  },
+  "support": "Поддержка",
+  "supportLinks": {
+    "supportCareer": "Поддержка карьерного роста",
+    "service": "24-часовое обслуживание",
+    "quickChat": "Чат для вопросов"
+  },
+  "contact": "Контакты",
+  "contactLinks": {
+    "whatsapp": "Whatsapp",
+    "support": "Поддержка 24"
+  },
+  "copyright": "Copyright © 2025 KARA Shop",
+  "createdBy": "Created By Anchi",
+  "reserved": "All Right Reserved"
+}
