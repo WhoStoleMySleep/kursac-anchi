@@ -1,14 +1,14 @@
-import { DefaultSeoProps } from 'next-seo';
+import {DefaultSeoProps} from 'next-seo';
 
 const config: DefaultSeoProps = {
   defaultTitle: 'KARA Shop',
   titleTemplate: '%s | KARA Shop',
   description:
-    'Ecommerce built with T3 Stack : NextJS, TypeScript, tRPC, Prisma, NextAuth and styled with Tailwind CSS',
+    'Лучшие кроссовки только в KARA Shop!',
   canonical: 'https://karashop.vercel.app',
   openGraph: {
     type: 'website',
-    locale: 'en_IE',
+    locale: 'ru_RU',
     url: 'https://karashop.vercel.app',
     siteName: 'KARA Shop',
   },

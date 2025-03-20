@@ -1,15 +1,9 @@
-import { useTranslation } from 'next-i18next';
+import {useTranslation} from 'next-i18next';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import {
-  BsFacebook,
-  BsGithub,
-  BsLinkedin,
-  BsTwitter,
-  BsInstagram,
-} from 'react-icons/bs';
-import { IconType } from 'react-icons/lib';
+import {BsFacebook, BsInstagram, BsLinkedin, BsTwitter,} from 'react-icons/bs';
+import {IconType} from 'react-icons/lib';
 
 const socialMedias: [IconType, string][] = [
   [BsInstagram, 'https://instagram.com'],
@@ -99,26 +93,6 @@ export const Footer = () => {
                 </ul>
               </div>
             ))}
-          </div>
-        </div>
-      </div>
-      <div className="bg-neutral-100">
-        <div className="mx-auto max-w-7xl px-2 py-3">
-          <div className="flex flex-col items-center justify-between gap-3 text-xs font-medium text-neutral-700 md:flex-row">
-            <p>{t('copyright')}</p>
-            <Link href="https://github.com/mehrabmp/kara-shop" target="_blank">
-              <BsGithub size="1.25rem" />
-            </Link>
-            <p>
-              {`${t('createdBy')} `}
-              <strong>
-                <Link href="https://github.com/mehrabmp" target="_blank">
-                  Mehrab
-                </Link>
-              </strong>
-              {'. '}
-              {t('reserved')}
-            </p>
           </div>
         </div>
       </div>

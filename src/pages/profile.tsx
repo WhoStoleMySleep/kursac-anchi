@@ -23,7 +23,7 @@ const Home: NextPageWithLayout = () => {
 
 Home.getLayout = function getLayout(page: ReactElement) {
   return (
-    <PrimaryLayout seo={{ title: 'Home', canonical: '/' }}>
+    <PrimaryLayout seo={{ title: 'Профиль', canonical: '/' }}>
       {page}
     </PrimaryLayout>
   );

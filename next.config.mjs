@@ -31,6 +31,14 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'pbs.twimg.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'static.street-beat.ru',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.iz.ru',
+      },
     ],
   },
   output: 'standalone',

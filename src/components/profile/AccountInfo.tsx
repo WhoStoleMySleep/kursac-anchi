@@ -3,8 +3,6 @@ import Image from "next/image";
 
 export const AccountInfo = () => {
   const { data: session } = useSession();
-
-  console.log(session?.user)
   
   return (
     <div className="flex flex-col items-center pt-20 min-h-screen gap-2 rounded-lg bg-white p-2">

@@ -4,3 +4,4 @@ export * from './home/Hero';
 export * from './bottom-navigation/BottomNavigation';
 export * from './product/Navigation';
 export * from './product/ProductList';
+export * from './blog/BlogList';

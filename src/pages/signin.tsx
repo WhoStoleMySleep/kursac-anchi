@@ -1,5 +1,5 @@
 import type {GetStaticProps} from 'next';
-import type {ReactElement} from 'react';
+import {ReactElement} from 'react';
 import type {NextPageWithLayout} from './_app';
 import {serverSideTranslations} from 'next-i18next/serverSideTranslations';
 import {PrimaryLayout} from '@/layouts';
@@ -75,8 +75,8 @@ Signin.getLayout = function getLayout(page: ReactElement) {
   return (
     <PrimaryLayout
       seo={{
-        title: 'Sign in',
-        description: 'Sign in',
+        title: 'Авторизация',
+        description: 'Авторизация',
         canonical: 'https://karashop.vercel.app/signin',
       }}
     >

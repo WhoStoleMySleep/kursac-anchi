@@ -3,6 +3,7 @@ import GoogleProvider from 'next-auth/providers/google';
 import {PrismaAdapter} from '@next-auth/prisma-adapter';
 import {prisma} from '@/server/prisma';
 import {env} from '@/env/server.mjs';
+import {redirect} from "next/navigation";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -20,7 +21,15 @@ export const authOptions: NextAuthOptions = {
       }
       return session;
     },
+    redirect({ url, baseUrl }) {
+      return '/'
+    },
   },
+  events: {
+    async signIn(message) {
+      redirect('/')
+    }
+  }
 };
 
 export default NextAuth(authOptions);

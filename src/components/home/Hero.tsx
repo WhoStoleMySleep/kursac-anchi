@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { FiShoppingCart } from 'react-icons/fi';
-import { useTranslation } from 'next-i18next';
+import {FiShoppingCart} from 'react-icons/fi';
+import {useTranslation} from 'next-i18next';
 
 export const Hero = () => {
   const { t } = useTranslation('home');
@@ -32,7 +32,7 @@ export const Hero = () => {
             {t('hero.description')}
           </h3>
           <Link
-            href={''}
+            href={'products/men'}
             data-aos="fade-up"
             data-aos-delay="500"
             className="mb-10 flex items-center rounded bg-zinc-900 px-8 py-2.5 text-base font-normal text-white shadow-sm shadow-zinc-500"

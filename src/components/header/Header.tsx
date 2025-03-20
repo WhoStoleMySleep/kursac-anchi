@@ -6,11 +6,10 @@ import {Transition} from '@headlessui/react';
 import {IconType} from 'react-icons';
 import {FiHeart, FiShoppingBag, FiUser} from 'react-icons/fi';
 import {Search} from './Search';
-import {TopBar} from './TopBar';
 import {MegaMenu} from './MegaMenu';
 import {Collections} from '@/types';
 import {BottomNavigation} from '@/components';
-import {signOut, useSession} from 'next-auth/react';
+import {useSession} from 'next-auth/react';
 
 export interface NavLink {
   name: 'men' | 'women' | 'kids' | 'sale' | 'blog' | 'contacts';
@@ -42,7 +41,6 @@ export const Header = ({ collections }: { collections: Collections }) => {
 
   return (
     <header>
-      <TopBar />
       <div className="relative h-14 bg-white shadow-md shadow-gray-200">
         <div className="mx-auto flex h-full items-center px-4 xl:container">
           <div className="mr-5 flex shrink-0 items-center">
@@ -79,7 +77,7 @@ export const Header = ({ collections }: { collections: Collections }) => {
           </ul>
           <ul className="ml-auto items-center md:flex">
             <Search onSearch={value => console.log(value)} />
-            {sideNavLinks.map(([url, Icon]) => (
+            {sideNavLinks.map(([url, Icon]) => !(session && url === '/signin') && (
               <Link key={url} href={url} className="ml-5 hidden md:block">
                 <Icon
                   className="text-neutral-700 transition-colors hover:text-violet-700"
@@ -88,9 +86,9 @@ export const Header = ({ collections }: { collections: Collections }) => {
               </Link>
             ))}
             {session && (
-              <button
+              <Link
+                href="/profile"
                 className="ml-5 hidden rounded-full border border-solid border-violet-700 p-[2px] md:block"
-                onClick={() => signOut()}
               >
                 {session.user?.image && (
                   <Image
@@ -102,7 +100,7 @@ export const Header = ({ collections }: { collections: Collections }) => {
                     quality={100}
                   />
                 )}
-              </button>
+              </Link>
             )}
           </ul>
         </div>
